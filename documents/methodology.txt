@@ -1,0 +1,52 @@
+MUTUAL FUND RECOMMENDATION SYSTEM — METHODOLOGY
+
+HOW WE RECOMMEND FUNDS:
+We fetch real NAV data from AMFI for the last 3 years.
+We calculate 3 metrics for every fund:
+
+1. CAGR (Compound Annual Growth Rate):
+CAGR tells you how much a fund grew per year on average.
+Formula: (End NAV / Start NAV) ^ (1/3) - 1
+Example: If a fund grew from NAV 100 to 200 in 3 years, CAGR = 26%
+Higher CAGR means better growth historically.
+
+2. Volatility:
+Volatility tells you how much the fund value went up and down.
+Formula: Standard deviation of daily returns x square root of 252
+Lower volatility means the fund was more stable.
+Higher volatility means the fund value fluctuated a lot.
+
+3. Sharpe Ratio:
+Sharpe ratio tells you how much return the fund gave per unit of risk taken.
+Formula: (CAGR - Risk Free Rate) / Volatility
+We use 6.5% as risk free rate (RBI repo rate proxy).
+Higher Sharpe ratio means better return for the risk taken.
+A Sharpe ratio above 1 is generally considered good.
+
+WHY WE RANK BY SHARPE RATIO:
+Sharpe ratio is the best single metric because it balances both return and risk.
+A fund with 20% CAGR but very high volatility may score lower than
+a fund with 12% CAGR but very low volatility.
+This protects investors from chasing high returns without understanding the risk.
+
+HOW RISK LEVELS WORK:
+Low Risk — Large Cap, Liquid, Debt funds
+Medium Risk — Flexi Cap, Hybrid, ELSS funds
+High Risk — Mid Cap, Small Cap funds
+
+WHY ONLY THESE CATEGORIES:
+Large Cap and Liquid funds have historically shown lower volatility.
+Mid Cap and Small Cap funds have historically shown higher volatility but higher returns.
+This is based on SEBI fund categorization guidelines.
+
+HOW AGE AFFECTS RECOMMENDATIONS:
+Age does not change which funds are recommended.
+Age only helps explain the recommendation context.
+Younger investors have more time to recover from market fluctuations.
+Older investors may prefer stability over high growth.
+
+IMPORTANT DISCLAIMER:
+All recommendations are based on historical NAV data only.
+Past performance does not guarantee future returns.
+This system is not a SEBI registered investment advisor.
+Please consult a financial advisor before investing.
