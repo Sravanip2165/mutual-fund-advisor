@@ -4,7 +4,7 @@ from metrics import recommend_funds
 from explainer import explain_recommendations, explain_tradeoffs
 from rag import get_vectorstore, answer_question
 
-st.set_page_config(page_title="Mutual Fund Advisor", page_icon="📊", layout="centered")
+st.set_page_config(page_title="FinSight AI", page_icon="📊", layout="centered")
 
 st.markdown("""
 <style>
@@ -204,7 +204,7 @@ st.markdown("""
     <div class="logo-box">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
     </div>
-    <h1>Mutual Fund Advisor</h1>
+    <h1>FinSight AI</h1>
     <p>Personalized recommendations powered by AMFI data & SEBI guidelines</p>
 </div>
 """, unsafe_allow_html=True)
@@ -395,6 +395,6 @@ with st.container(border=True):
 st.markdown("""
 <div class="app-footer">
     This is an educational tool. Always consult a registered financial advisor before making investment decisions.<br>
-    © 2024 Mutual Fund Advisor. All rights reserved.
+    © 2024 FinSight AI. All rights reserved.
 </div>
 """, unsafe_allow_html=True)
